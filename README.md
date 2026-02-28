@@ -57,6 +57,13 @@ This course focuses on professional development, Git & GitHub workflows, Markdow
 
 ---
 
+### Course Outline
+
+<img src= "/images/outline_1.png" width ="300">
+<img src= "/images/outline_2.png" width ="300">
+
+---
+
 ## Example Git Workflow
 
 ```bash
