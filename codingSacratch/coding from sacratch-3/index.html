@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Monty Hall Problem</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <h1>The Monty Hall Problem</h1>
+
+    <script>
+        var switchCounter = 0;
+        for (i = 0; i < 10000; i++) {
+            var car = Math.ceil(Math.random() * 3);
+            document.write("<p>The car is in door no " + car + "</p>");
+
+            var choice = Math.ceil(Math.random() * 3);
+            document.write("<p>The contestant choses door number " + choice + "</p>");
+
+            var remove;
+
+            do {
+                remove = Math.ceil(Math.random() * 3);
+            }
+            while (remove == car || remove == choice);
+
+            document.write("<p>The host removed door number " + remove + "</p>");
+
+            if (car == choice) {
+                document.write("<p style='color:green'>The Contestant should stay.</p>");
+            }
+            else {
+                document.write("<p style='color:red'>The Contestant should switch!</p>");
+            }
+            if (car != choice) switchCounter++;
+        }
+
+        var switchPercentage = (switchCounter / 10000) * 100;
+        document.write("<p>" + switchPercentage + " % of the time switch was correct</p>");
+
+    </script>
+
+</body>
+
+</html>
